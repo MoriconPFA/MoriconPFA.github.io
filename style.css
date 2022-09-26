@@ -152,8 +152,10 @@ nav ul li:hover > .submenu {
 	font-size: 1.8em;
 }
 
-.thanks {
-	font-size: 4.5em;
+#info h2.thanks {
+	font-size: 4rem;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
 }
 
 #subInfo {
