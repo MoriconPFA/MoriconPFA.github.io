@@ -1,8 +1,2 @@
 User-agent: *
-Disallow: /exhibitors/
-Disallow: /fonts/
-Disallow: /ki/
-Disallow: /partnership/
-Disallow: /qr/
-Disallow: /sponsors/
 Sitemap: https://moricon.pl/sitemap.xml
