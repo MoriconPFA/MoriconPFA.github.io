@@ -1,0 +1,13 @@
+footer {
+	display: flex;
+}
+footer .logo {
+	height: 200px;
+}
+
+
+@media screen and (width < 1200px) { 
+	footer {
+		flex-direction: column;
+	}
+}

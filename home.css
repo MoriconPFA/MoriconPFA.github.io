@@ -1,0 +1,135 @@
+#home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: url("./assets/home_background.png") repeat-x center;
+	padding-top: 125px;
+	height: 900px;
+	overflow: hidden;
+}
+
+#home .logo {
+	height: 300px;
+}
+
+#home .time {
+	font-size: 64px;
+	margin: 10px 0;
+	font-family: "SetoFont";
+	color: var(--momoroz);
+	text-shadow: 2px 2px var(--bialy), -2px -2px var(--bialy), -2px 2px var(--bialy), 2px -2px var(--bialy), 0px 2px var(--bialy), 2px 0px var(--bialy), -2px 0px var(--bialy), 0px -2px var(--bialy);
+}
+
+#home .stripeLeft, #home .stripeRight {
+	margin: 20px 0;
+}
+
+#home .stripeLeft span, #home .stripeRight span {
+	position: relative;
+	z-index: 1;
+	text-shadow: 2px 2px var(--bialy), -2px -2px var(--bialy), -2px 2px var(--bialy), 2px -2px var(--bialy), 0px 2px var(--bialy), 2px 0px var(--bialy), -2px 0px var(--bialy), 0px -2px var(--bialy);
+}
+
+#home .stripeLeft {
+	padding-left: 150px;
+}
+
+#home .stripeRight {
+	padding-right: 200px;
+}
+
+#home .bushLeft, #home .bushRight {
+	position: absolute;
+	bottom: 0;
+}
+
+#home .bushLeft {
+	left: 0;
+}
+
+#home .bushRight {
+	right: 0;
+}
+
+#home .momo, #home .mori {
+	position: absolute;
+	bottom: 0;
+	height: 600px;
+}
+
+#home .momo {
+	right: 300px;
+	rotate: -15deg;
+}
+#home .mori {
+	left: 300px;
+}
+
+#home .button {
+	margin-top: 50px;
+	z-index: 1;
+}
+
+
+@media screen and (width < 1200px) {
+	#home {
+		padding-top: 0;
+		height: 580px;
+	}
+
+	#home .logo {
+		height: 180px;
+	}
+
+	#home .time {
+		font-size: 40px;
+	}
+
+	#home .stripeLeft, #home .stripeRight {
+		margin: 5px 0;
+	}
+
+	#home .stripeLeft {
+		padding-right: 50px;
+		padding-left: 100px;
+	}
+
+	#home .stripeRight {
+		padding-left: 50px;
+		padding-right: 100px;
+	}
+
+	#home .button {
+		margin-top: 100px;
+	}
+
+	#home .bushLeft, #home .bushRight {
+		height: 300px;
+	}
+
+	#home .bushLeft {
+		left: -150px;
+	}
+
+	#home .bushRight {
+		right: -150px;
+	}
+
+	#home .momo, #home .mori {
+		height: 300px;
+	}
+
+	#home .momo {
+		right: -10px;
+	}
+	#home .mori {
+		left: -10px;
+	}
+
+}
+
+/* @media screen and (width < 900px) {
+
+} */
