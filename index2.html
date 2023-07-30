@@ -4,53 +4,60 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./assets//favicon.png" type="image/png">
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
   <meta name="description" content="Festiwal Moricon to dziesiąta edycja Podlaskiego Festiwalu Anime - imprezy kierowanej do wszystkich fanów szeroko pojętej popkultury. Jest to najstarsza i największa tego typu impreza na Podlasiu, co rok zrzeszająca setki osób w różnym wieku, a z roku na rok przybywa nam uczestników spoza województwa podlaskiego.">
   <meta name="keywords" content="PFA, podlaski festiwal anime, moricon, białystok, PB, politechnika białostocka, pfa 10, konwent, anime, manga, gry, gameing, fantazy, podlasie, wrzesień">
 	<title>Moricon</title>
-	<link rel="stylesheet" href="fonts.css">
-	<link rel="stylesheet" href="default_style.css">
-	<link rel="stylesheet" href="header.css">
-	<link rel="stylesheet" href="home.css">
-	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="./styles/fonts.css">
+	<link rel="stylesheet" href="./styles/default_style.css">
+	<link rel="stylesheet" href="./styles/header.css">
+	<link rel="stylesheet" href="./styles/home.css">
+	<link rel="stylesheet" href="./styles/sponsors.css">
+	<link rel="stylesheet" href="./styles/info.css">
+	<link rel="stylesheet" href="./styles/tickets.css">
+	<link rel="stylesheet" href="./styles/informations.css">
+	<link rel="stylesheet" href="./styles/submissions.css">
+	<link rel="stylesheet" href="./styles/regulations.css">
+	<link rel="stylesheet" href="./styles/contact.css">
+	<link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
 	<nav>
-		<a href="./home.html">
+		<a href="#home">
 			<img alt="logo" src="./assets/logo.png" class="logo" />
 		</a>
 		<button class="menuButton"><span></span></button>
 		<ul>
 			<li data-href="bilety">
-				<a href="./bilety.html">
+				<a href="#bilety">
 					<span>
 						Bilety
 					</span>
 				</a>
 			</li>
 			<li data-href="Informacje">
-				<a href="./informacje.html">
+				<a href="#informacje">
 					<span>
 						Informacje
 					</span>
 				</a>
 			</li>
 			<li data-href="Zgłoszenia">
-				<a href="./zgloszenia.html">
+				<a href="#zgloszenia">
 					<span>
 						Zgłoszenia
 					</span>
 				</a>
 			</li>
 			<li data-href="Regulaminy">
-				<a href="./regulaminy.html">
+				<a href="#regulaminy">
 					<span>
 						Regulaminy
 					</span>
 					</a>
 			</li>
 			<li data-href="Kontakt">
-				<a href="./kontakt.html">
+				<a href="#kontakt">
 					<span>
 						Kontakt
 					</span>
@@ -88,7 +95,7 @@
 					nie ma czasu!
 				</span>
 			</div>
-			<button class="button">
+			<button class="button" disabled style="--text: 'Niedostępne do czasu'">
 				<span>
 					Kup bilet
 				</span>
@@ -98,48 +105,113 @@
 			<img class="mori" src="./assets/mori_promo_small.png"/>
 			<img class="momo" src="./assets/momo_promo_small.png"/>
 		</article>
-		<aside>
+
+
+		<aside id="sponsors">
 			<a href="" target="_blank">
-				<img />
+				<img src="./assets/sponsors/zabenka.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/pb.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/red_panda.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/acadera.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/Mangowe.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/KOCIE_CAFE_RGB.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/nanokarrin.png" />
+			</a>
+			<a href="" target="_blank">
+				<img src="./assets/sponsors/mrozna_brama.png" />
 			</a>
 		</aside>
-		<article>
+
+
+		<article id="info">
 			<div class="stripeLeft">
 				Czym jest moricon?
 			</div>
-			<p>Moricon to podlaski konwent skierowany do całej społeczności fanów anime, mangi i kultury Azji Wschodniej, ale też fantastyki, gier planszowych i komputerowych.</p>
-			<p>W ciągu trzech dni Moriconu uczestnicy będą mogli uczestniczyć w wielu prelekcjach, panelach dyskusyjnych, konkursach i innych atrakcjach, skosztować azjatyckich przysmaków i poznać wyjątkowych ludzi o podobnych zainteresowaniach!</p>
+			<div class="infoContainer">
+				<p>Moricon to podlaski konwent skierowany do całej społeczności fanów anime, mangi i kultury Azji Wschodniej, ale też fantastyki, gier planszowych i komputerowych.</p>
+				<p>W ciągu trzech dni Moriconu uczestnicy będą mogli uczestniczyć w wielu prelekcjach, panelach dyskusyjnych, konkursach i innych atrakcjach, skosztować azjatyckich przysmaków i poznać wyjątkowych ludzi o podobnych zainteresowaniach!</p>
+			</div>
+			<img class="momo" src="./assets/momo_promo_small.png" />
 		</article>
-		<article>
+
+
+		<article id="bilety">
 			<h2>bilety</h2>
-			<p>Chcesz kupić bilety na nasze wspaniałe wydarzenie i przeżyć niesamowite emocje?
+			<p>Chcesz kupić bilety na nasze wspaniałe wydarzenie <br class="lineBreak"/> i przeżyć niesamowite emocje? <br/>
 				Kliknij tutaj!</p>
-			<button class="button">
+			<button class="button" disabled style="--text:'Niedostępne do czasu'">
 				<span>
 					Kup bilet
 				</span>
 			</button>
+			<img class="bushLeft" src="./assets/bush_left_ticket.png" />
+			<img class="bushRight" src="./assets/bush_right_ticket.png" />
 		</article>
-		<article>
+
+
+		<article id="informacje">
 			<div class="stripeRight">
 				Informacje
 			</div>
-			<div><h4>Kiedy?</h4></div>
-			<div><h4>Gdzie?</h4></div>
-			<div><h4>Co jeśli nie ma z kim iść?</h4></div>
+			<div class="container">
+				<div class="placeAndTime">
+					<div class="place">
+						<h4>Kiedy?</h4>
+						<p>Moricon 2023 odbędzie się 8-10 września</p>
+						<p>
+							Zapraszamy w godzinach:<br/>
+							Piątek: 14:00 - 20:00<br/>
+							Sobota: 8:00 - 20:00<br/>
+							Niedziela: 8:00 - 14:00<br/>
+						</p>
+					</div>
+					<div class="time">
+						<h4>Gdzie?</h4>
+						<p>
+							Centrum Nowoczesnego<br/>
+							Kształcenia Politechniki<br/>
+							Białostockiej<br/>
+							ul. Zwierzyniecka 16.<br/>
+							15-333 Białystok<br/>
+						</p>
+					</div>
+				</div>
+				<div class="info">
+					<h4>Co jeśli nie mam z kim iść?</h4>
+					<p>
+						Zapraszamy na nasze wyderzenie!<br/>
+						Z pewnością znajdziesz tam<br/> towarzysza lub dwóch!
+					</p>
+				</div>
 
-			<button class="button">
-				<p>
-					Wydarzenie
-				</p>
-			</button>
-			<button class="button">
-				<p>
-					Plan już wkrótce
-				</p>
-			</button>
+				<button class="button">
+					<p>
+						Wydarzenie
+					</p>
+				</button>
+				<button class="button">
+					<p>
+						Plan już wkrótce
+					</p>
+				</button>
+			</div>
+			<img src="./assets/mori_promo_small.png" class="mori" />
 		</article>
-		<article>
+
+
+		<article id="zgloszenia">
 			<h2>Zgłoszenia</h2>
 			<button class="buttonFlower">
 				<p>
@@ -162,27 +234,40 @@
 				</p>
 			</button>
 			<button class="buttonFlower">
-				<p>
+				<!-- <p> -->
 					Konkurs Cosplay
-				</p>
+				<!-- </p> -->
 			</button>
 			<button class="buttonFlower">
-				<p>
 					Sponsorzy
-				</p>
 			</button>
 		</article>
-		<article>
+
+
+		<article id="regulaminy">
 			<div class="stripeLeft">
 				Regulaminy
 			</div>
+			<div class="container">
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+				<a href="#">Lorem Ipsum</a>
+			</div>
 
 		</article>
-		<article>
+
+
+		<article id="kontakt">
 			<h2>Kontakt</h2>
-			<p>Masz pytanie, na które nie znalazłeś odpowiedzi?Skontaktuj się z nami!</p>
+			<p>Masz pytanie, na które nie znalazłeś odpowiedzi?<br/>Skontaktuj się z nami!</p>
 			<a href="mailto:kontakt@moricon.pl">
-				<p>kontakt@moricon.pl</p>
+				kontakt@moricon.pl
 			</a>
 		</article>
 
@@ -190,8 +275,10 @@
 	<!-- END CONTENT -->
 
 	<footer>
-		<img class="logo" src="./assets/Logo.png">
-		<div>
+		<a href="">
+			<img class="logo" src="./assets/Logo.png">
+		</a>
+		<div class="container">
 			<a href="">
 				<img src="./assets/sponsors/zabenka.png" />
 			</a>

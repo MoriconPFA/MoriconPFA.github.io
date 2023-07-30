@@ -9,12 +9,16 @@
 	--gradient: linear-gradient(359.27deg, #FE90B0 0.59%, #FFADC2 28.88%, #FFBDC9 59.03%, #FDE6D8 85.97%);
 }
 
-@media screen and (899px < width < 1200px) {}
 
-@media screen and (width < 900px) {}
+/* font-family: "BloggerSans"; */
+/* font-family: "SetoFont"; */
+
+/* @media screen and (899px < width < 1200px) {} */
+
+/* @media screen and (width < 900px) {} */
 
 body {
-	background: #777;
+	background: linear-gradient(#ecf6af 50%, #edf7d1 60%, #f8fad0);
 	margin: 0;
 	overflow-x: hidden;
 	/* contain: paint; */
@@ -46,9 +50,25 @@ main {
 	position: relative;
 }
 
-.button:hover {
+.button:disabled {
+	filter: grayscale(100%);
+	position: relative;
+}
+
+.button:hover:not(:disabled) {
 	scale: 1.05;
 	cursor: pointer;
+}
+
+.button:hover:disabled::after {
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	display: block;
+	/* content: attr("disabledInfo"); */
+	/* content: attr("data-foo") " "; */
+	/* content: "TESTING"; */
+	content: var(--text);
 }
 
 .buttonFlower {
@@ -66,10 +86,10 @@ main {
 	font-size: 42px;
 	font-weight: 600;
 	/* line-height: 44px; */
-	line-height: 0;
+	/* line-height: 0; */
 	letter-spacing: 0em;
 	text-align: center;
-	padding: 20px 40px;
+	/* padding: 20px 40px; */
 	text-transform: uppercase;
 	cursor: pointer;
 }
@@ -80,7 +100,7 @@ main {
 }
 
 .buttonFlower::after {
-	background: url("./assets/flower.png") no-repeat;
+	background: url("../assets/flower.png") no-repeat;
 	background-size: contain;
 	content: " ";
   position: absolute;
@@ -107,6 +127,7 @@ main {
 	text-transform: uppercase;
 	width: 50%;
 	color: var(--momoroz);
+	font-family: "SetoFont";
 }
 
 .stripeLeft {
@@ -120,6 +141,13 @@ main {
 	padding-left: 20px;
 }
 
+h2 {
+	text-transform: uppercase;
+	color: var(--momoroz);
+	font-size: 40px;
+	width: 100%;
+	text-align: center;
+}
 
 @media screen and (width < 900px) {
 	.stripeLeft, .stripeRight {

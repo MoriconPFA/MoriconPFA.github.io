@@ -4,8 +4,9 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	background: url("./assets/home_background.png") repeat-x center;
-	padding-top: 125px;
+	background: url("../assets/home_background.png") repeat-x center;
+	/* padding-top: 125px; */
+	padding-bottom: 25px;
 	height: 900px;
 	overflow: hidden;
 }

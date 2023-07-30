@@ -1,0 +1,39 @@
+#regulaminy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+#regulaminy .stripeLeft {
+	width: 40%;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+#regulaminy .container {
+	width: min(100vw, 1000px);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#regulaminy .container a {
+	text-decoration: none;
+	color: var(--momoroz);
+	font-size: 30px;
+	margin: 10px;
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+
+@media screen and (width < 1000px) {
+	#regulaminy .container {
+		width: 50%;
+		justify-content: center;
+	}
+
+	#regulaminy .container a {
+		font-size: 35px;
+	}
+}

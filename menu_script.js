@@ -16,6 +16,17 @@ menuButton.addEventListener("click", () => {
 	}
 })
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			menuNav.classList.remove("active")
+
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+			});
+	});
+});
+
 
 // alternative to DOMContentLoaded
 document.onreadystatechange = function () {

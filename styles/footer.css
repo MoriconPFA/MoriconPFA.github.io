@@ -1,0 +1,46 @@
+footer {
+	background: url("../assets/bg_footer_2.png");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 150px 0 50px;
+}
+
+footer .logo {
+	height: 200px;
+}
+
+footer .container {
+	margin-left: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 450px;
+}
+
+footer .container p {
+	color: #fff;
+	font-size: 30px;
+	margin-right: 40px;
+}
+
+footer .container a {
+	margin: 2.5px 15px;
+	text-decoration: none;
+}
+
+
+@media screen and (width < 1000px) {
+	footer {
+		flex-direction: column;
+		background-size: cover;
+	}
+	footer .container {
+		margin-left: 0px;
+		max-width: 100%;
+	}
+	footer .logo {
+		height: 200px;
+		max-width: 100%;
+	}
+}

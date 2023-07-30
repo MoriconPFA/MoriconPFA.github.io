@@ -1,0 +1,66 @@
+#info {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	width: 100%;
+}
+
+#info .momo {
+	position: absolute;
+	top: 0;
+	right: 30%;
+	transform: translateX(30%);
+	height: 600px;
+}
+
+#info .infoContainer {
+	margin-top: 100px;
+}
+
+#info .infoContainer p {
+	font-size: 23px;
+	width: max(70%, 600px);
+	box-sizing: border-box;
+	padding-right: 500px;
+	margin-left: 200px;
+	color: var(--momoroz);
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+
+@media screen and (width < 1000px) {
+	#info {
+		min-height: 400px;
+		overflow: hidden;
+	}
+
+	#info .momo {
+		height: 300px;
+		right: 0%;
+		top: 100px;
+		/* transform: none; */
+		transform: translateX(10%);
+	}
+
+	#info .stripeLeft {
+		width: 80%;
+	}
+
+	#info .infoContainer {
+		margin-top: 20px;
+	}
+
+	#info .infoContainer p {
+		padding: 0;
+		width: 60%;
+		font-size: 18px;
+		margin-left: 30px;
+	}
+
+	#info {
+		padding: 50px 0 20px;
+	}
+}
