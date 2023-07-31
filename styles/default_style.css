@@ -161,3 +161,37 @@ h2 {
 		font-weight: 600;
 	}
 }
+
+.pageLoading {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--momoroz);
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pageLoading img {
+	max-height: 400px;
+	max-width: 400px;
+	width: 100%;
+	animation: flowerRotation 3.5s ease-in-out 0s infinite;
+}
+
+.pageLoading.hidding {
+	transition: 1s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@keyframes flowerRotation {
+	0% {
+		rotate: 0deg;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
