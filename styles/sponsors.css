@@ -18,7 +18,7 @@
 
 #sponsors .container.animation {
 /* #sponsors .container { */
-	animation: scrollSponsors 10s linear 0s infinite;
+	animation: scrollSponsors 15s linear 0s infinite;
 }
 
 #sponsors :where(img, a) {
