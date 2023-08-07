@@ -1,0 +1,85 @@
+#informacje {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#informacje .stripeRight {
+	padding-left: 100px;
+	width: 40%;
+}
+
+#informacje h4 {
+	color: var(--momoroz);
+	font-size: 25px;
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+#informacje :where(.placeAndTime, .info) p {
+	color: #7E1E47;
+	font-size: 20px;
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+#informacje .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-left: 20%;
+	text-align: right;
+}
+
+#informacje .placeAndTime {
+	display: flex;
+	justify-content: space-between;
+}
+
+#informacje .time {
+	margin-left: 100px;
+}
+
+#informacje .button {
+	margin-top: 40px;
+}
+
+#informacje .mori {
+	position: absolute;
+	top: 0;
+	left: 15%;
+	z-index: -1;
+}
+
+@media screen and (width < 1000px) {
+	#informacje {
+		margin-top: 50px;
+	}
+
+	#informacje .stripeRight {
+		padding-left: 20px;
+		width: 60%;
+	}
+	#informacje .stripeRight h2 {
+		font-size: 30px;
+	}
+
+	#informacje .mori {
+		position: absolute;
+		top: 150px;
+		left: 0;
+		height: 360px;
+	}
+
+	#informacje .placeAndTime {
+		flex-direction: column;
+		justify-content: space-between;
+		width: 90%;
+	}
+
+	/* #informacje .button {
+		align-self: center;
+	} */
+
+}

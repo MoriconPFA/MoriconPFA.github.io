@@ -1,0 +1,27 @@
+#sponsors {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 10%;
+	background: #fff;
+	overflow: hidden;
+	/* width: 100vw; */
+	width: 100%;
+	box-sizing: border-box;
+	height: 120px;
+}
+
+#sponsors :where(img, a) {
+	max-height: 100px;
+	margin: 0 10px;
+	/* height: 100px; */
+}
+
+
+
+/* @media screen and (width < 900px) {
+
+} */
+@media screen and (width < 1200px) {
+
+}
