@@ -152,6 +152,9 @@
 }
 
 @media screen and (width < 900px) {
+	#home {
+		padding-top: 100px;
+	}
 	#home .stripeLeft h2, #home .stripeRight h2 {
 		font-size: 30px;
 	}

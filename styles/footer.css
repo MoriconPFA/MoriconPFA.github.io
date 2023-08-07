@@ -18,7 +18,7 @@ footer .container {
 	width: 450px;
 }
 
-footer .container p {
+footer .container :where(p, a) {
 	color: #fff;
 	font-size: 30px;
 	margin-right: 40px;
@@ -29,6 +29,13 @@ footer .container a {
 	text-decoration: none;
 }
 
+#odliczanie h2 {
+	font-size: 64px;
+	margin: 10px 0;
+	font-family: "SetoFont";
+	color: var(--momoroz);
+	text-shadow: 2px 2px #fff, -2px -2px #fff, -2px 2px #fff, 2px -2px #fff, 0px 2px #fff, 2px 0px #fff, -2px 0px #fff, 0px -2px #fff;
+}
 
 @media screen and (width < 1000px) {
 	footer {
@@ -42,5 +49,21 @@ footer .container a {
 	footer .logo {
 		height: 200px;
 		max-width: 100%;
+	}
+
+	#odliczanie h2 {
+		font-size: 40px;
+	}
+}
+
+@media screen and (width < 500px) {
+	footer .container {
+		/* flex-direction: column; */
+		justify-content: center;
+	}
+	footer .container a[href^="mailto:"] {
+		width: 100%;
+		text-align: center;
+		margin: 0 0 20px;
 	}
 }

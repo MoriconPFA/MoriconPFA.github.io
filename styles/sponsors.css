@@ -1,14 +1,24 @@
 #sponsors {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	padding: 10px 10%;
 	background: #fff;
 	overflow: hidden;
-	/* width: 100vw; */
 	width: 100%;
 	box-sizing: border-box;
 	height: 120px;
+	position: relative;
+	display: flex;
+}
+
+#sponsors :where(.container, .containerCopy) {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+}
+
+#sponsors .container.animation {
+/* #sponsors .container { */
+	animation: scrollSponsors 10s linear 0s infinite;
 }
 
 #sponsors :where(img, a) {
@@ -18,10 +28,18 @@
 }
 
 
+@media screen and (width < 1540px) {
+	#sponsors {
+		padding: 10px 0%;
+	}
 
-/* @media screen and (width < 900px) {
+}
 
-} */
-@media screen and (width < 1200px) {
-
+@keyframes scrollSponsors {
+	0% {
+		translate: 0px 0%;
+	}
+	100% {
+		translate: -1600px 0%;
+	}
 }

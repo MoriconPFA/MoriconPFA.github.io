@@ -78,6 +78,10 @@
 		width: 90%;
 	}
 
+	#informacje .container {
+		margin-right: 15px;
+	}
+
 	/* #informacje .button {
 		align-self: center;
 	} */

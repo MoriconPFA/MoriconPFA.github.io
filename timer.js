@@ -1,8 +1,7 @@
 const timeObject = document.querySelector(".timeRemining");
 const moriconTime = new Date("09-08-2023 14:00");
-// const moriconTime = new Date("05-12-2023 14:00");
-
-console.log(moriconTime);
+// const moriconTime = new Date("08-08-2023 14:00");
+let timer = null;
 
 const renderTime = () => {
 	let sec = 0;
@@ -12,18 +11,25 @@ const renderTime = () => {
 	const now = new Date();
 	let deltaTime = moriconTime.getTime() - now.getTime();
 
-	sec = Math.floor((deltaTime / 1000) % 60);
-	min = Math.floor((deltaTime / (1000 * 60)) % 60);
-	hours = Math.floor((deltaTime / (1000 * 60 * 60)) % 24);
-	days = Math.floor((deltaTime / (1000 * 60 * 60 * 24)));
+	if (deltaTime > 0) {
+		sec = Math.floor((deltaTime / 1000) % 60);
+		min = Math.floor((deltaTime / (1000 * 60)) % 60);
+		hours = Math.floor((deltaTime / (1000 * 60 * 60)) % 24);
+		days = Math.floor((deltaTime / (1000 * 60 * 60 * 24)));
 
-	sec = sec < 10 ? `0${sec}` : `${sec}`;
-	min = min < 10 ? `0${min}` : `${min}`;
-	hours = hours < 10 ? `0${hours}` : `${hours}`;
+		sec = sec < 10 ? `0${sec}` : `${sec}`;
+		min = min < 10 ? `0${min}` : `${min}`;
+		hours = hours < 10 ? `0${hours}` : `${hours}`;
 
-	timeObject.innerHTML = `${!!days ? `${days} dni ` : ""} ${hours}:${min}:${sec}`
+		timeObject.innerHTML = `${!!days ? `${days} dni ` : ""} ${hours}:${min}:${sec}`
+	} else {
+		timeObject.innerHTML = "Widzimy się na miejscu"
+		document.querySelector("#odliczanie h2:first-child:not(h2.timeRemining)")?.remove();
+		clearInterval(timer);
+	}
+
 }
 
 
 renderTime();
-setInterval(renderTime, 1000);
+timer = setInterval(renderTime, 1000);
