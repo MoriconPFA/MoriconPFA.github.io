@@ -14,6 +14,7 @@
 	right: 30%;
 	transform: translateX(30%);
 	height: 600px;
+	z-index: -1;
 }
 
 #info .infoContainer {
@@ -22,11 +23,14 @@
 
 #info .infoContainer p {
 	font-size: 23px;
-	width: max(70%, 600px);
-	box-sizing: border-box;
-	padding-right: 500px;
-	margin-left: 200px;
+	width: 600px;
+	margin-right: 400px;
+	/* width: max(70%, 600px); */
+	/* box-sizing: border-box; */
+	/* padding-right: 500px; */
+	/* margin-left: 200px; */
 	color: var(--momoroz);
+	z-index: 1;
 	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
 }
 
@@ -35,6 +39,7 @@
 	#info {
 		min-height: 400px;
 		overflow: hidden;
+		padding: 30px 0 20px;
 	}
 
 	#info .momo {
@@ -46,7 +51,11 @@
 	}
 
 	#info .stripeLeft {
-		width: 80%;
+		width: 60%;
+	}
+
+	#info .stripeLeft h2 {
+		font-size: 30px;
 	}
 
 	#info .infoContainer {
@@ -58,9 +67,5 @@
 		width: 60%;
 		font-size: 18px;
 		margin-left: 30px;
-	}
-
-	#info {
-		padding: 50px 0 20px;
 	}
 }

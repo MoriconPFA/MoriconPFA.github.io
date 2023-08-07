@@ -36,4 +36,8 @@
 	#regulaminy .container a {
 		font-size: 35px;
 	}
+
+	#regulaminy .stripeLeft h2{
+		font-size: 30px;
+	}
 }

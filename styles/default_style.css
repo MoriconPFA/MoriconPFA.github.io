@@ -45,14 +45,15 @@ main {
 	letter-spacing: 0em;
 	text-align: center;
 	padding: 20px 44px;
+	text-decoration: none;
 	text-transform: uppercase;
 
 	position: relative;
 }
 
-.button:disabled {
-	filter: grayscale(100%);
-	position: relative;
+*:disabled, *.disabled {
+	filter: grayscale(100%) !important;
+	cursor: not-allowed !important;
 }
 
 .button:hover:not(:disabled) {
@@ -113,12 +114,17 @@ main {
 	aspect-ratio: 1/1;
 }
 
-.buttonFlower:hover {
-	scale: 1.05;
+.buttonFlower:hover:not(:disabled)::after {
+  opacity: .6;
 }
 
-.buttonFlower:hover::after {
-  opacity: .6;
+/* .buttonFlower:disabled {
+	filter: grayscale(100%);
+} */
+
+.buttonFlower:hover:not(:disabled) {
+	scale: 1.05;
+	cursor: pointer;
 }
 
 .stripeLeft, .stripeRight {
@@ -127,26 +133,36 @@ main {
 	text-transform: uppercase;
 	width: 50%;
 	color: var(--momoroz);
-	font-family: "SetoFont";
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .stripeLeft {
 	align-self: flex-start;
 	text-align: end;
-	padding-right: 20px;
+	padding-right: 40px;
 }
 
 .stripeRight {
 	align-self: flex-end;
-	padding-left: 20px;
+	padding-left: 40px;
+}
+
+.stripeLeft h2, .stripeRight h2 {
+	margin: 0;
+	text-align: unset;
+	position: relative;
+	z-index: 1;
 }
 
 h2 {
 	text-transform: uppercase;
 	color: var(--momoroz);
-	font-size: 40px;
+	font-size: 60px;
 	width: 100%;
 	text-align: center;
+	font-weight: bold;
+	/* text-shadow: 2px 2px var(--bialy), -2px -2px var(--bialy), -2px 2px var(--bialy), 2px -2px var(--bialy), 0px 2px var(--bialy), 2px 0px var(--bialy), -2px 0px var(--bialy), 0px -2px var(--bialy); */
 }
 
 @media screen and (width < 900px) {
