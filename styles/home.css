@@ -49,10 +49,14 @@
 	right: -150px;
 }
 
+#home :where(.momo, .mori) {
+	height: 600px;
+
+}
+
 #home .momo, #home .mori {
 	position: absolute;
 	bottom: 0;
-	height: 600px;
 	opacity: 0;
 }
 
@@ -122,8 +126,8 @@
 		margin-top: 100px;
 	}
 
-	#home .bushLeft, #home .bushRight {
-		height: 300px;
+	#home :where(.bushLeft, .bushRight, .momo, .mori) {
+		height: 400px;
 	}
 
 	#home .bushLeft {
@@ -132,10 +136,6 @@
 
 	#home .bushRight {
 		right: -150px;
-	}
-
-	#home .momo, #home .mori {
-		height: 300px;
 	}
 
 	#home .momo {
@@ -157,6 +157,9 @@
 	}
 	#home .stripeLeft h2, #home .stripeRight h2 {
 		font-size: 30px;
+	}
+	#home :where(.bushLeft, .bushRight, .momo, .mori) {
+		height: 300px;
 	}
 }
 

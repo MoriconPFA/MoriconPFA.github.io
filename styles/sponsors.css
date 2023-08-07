@@ -1,5 +1,5 @@
 #sponsors {
-	padding: 10px 10%;
+	padding: 10px 5%;
 	background: #fff;
 	overflow: hidden;
 	width: 100%;
@@ -14,11 +14,14 @@
 	justify-content: space-around;
 	align-items: center;
 	position: relative;
+	/* width: 100%; */
+	flex: 1;
 }
 
 #sponsors .container.animation {
 /* #sponsors .container { */
-	animation: scrollSponsors 15s linear 0s infinite;
+	animation: scrollSponsors 14s linear 0s infinite;
+	/* animation: scrollSponsors 4s linear 0s infinite; */
 }
 
 #sponsors :where(img, a) {
@@ -40,6 +43,6 @@
 		translate: 0px 0%;
 	}
 	100% {
-		translate: -1600px 0%;
+		translate: -1182px 0%;
 	}
 }
