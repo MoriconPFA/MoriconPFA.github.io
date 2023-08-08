@@ -87,3 +87,9 @@
 	} */
 
 }
+
+@media screen and (width < 600px) {
+	#informacje .time {
+		margin-left: 0px;
+	}
+}
