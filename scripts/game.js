@@ -144,7 +144,7 @@ const checkIfGameIsSolvable = () => {
 const setupGame = () => {
 	movesCount = 0;
 	hideScreens();
-	const saveBreakpoint = 5;
+	const saveBreakpoint = 8;
 	let i = 0;
 	do {
 		// console.log(`SHUFFLE NR: ${i}`);
