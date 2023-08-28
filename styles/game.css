@@ -1,5 +1,5 @@
 :root {
-	--game-size: min(85vw, 800px);
+	--game-size: min(75vw, 800px);
 	/* --game-background: url("https://picsum.photos/800"); */
 	--game-background: url("../assets/puzzle.jpg");
 }
@@ -132,4 +132,18 @@
 	font-size: 23px;
 	color: var(--momoroz);
 	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+#game .zab {
+	position: relative;
+}
+#game .zab::after {
+	content: "";
+	height: .15em;
+	width: .15em;
+	background: var(--momoroz);
+	position: absolute;
+	top: 0px;
+	left: 5.5%;
+	border-radius: 50%;
 }

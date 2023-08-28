@@ -12,6 +12,7 @@ let isGamePlayable = false;
 let movesCount = 0;
 
 gamePuzzleElements.forEach((element, index) => {
+	if (index >= 2) index++;
 	// element.innerHTML = `${index + 1}`; //TO DEBUG TO SEE PUZZLE PART INDEX
 	const rowIndex = Math.floor(index / 3);
 	const columnIndex = index % 3;
@@ -140,7 +141,7 @@ const setupGame = () => {
 	let i = 0;
 	do {
 		// console.log(`SHUFFLE NR: ${i}`);
-		const puzzlePositions = [0, 1, 2, 3, 4, 5, 6, 7]
+		const puzzlePositions = [0, 1, 3, 4, 5, 6, 7, 8]
 		// const puzzlePositions = [7, 6, 4, 0, 3, 5, 1, 2] //TO DEBUG - UNSOLVABLE
 		// const puzzlePositions = [6, 7, 4, 0, 3, 5, 1, 2] //TO DEBUG - SOLVABLE
 		gamePuzzles.forEach((puzzle) => {
@@ -247,3 +248,5 @@ const displayInfoScreen = (screenType) => {
 		gameOverScreen.classList.add("active");
 	}
 }
+
+document.querySelector("#game").removeAttribute("style")
