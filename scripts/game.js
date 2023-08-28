@@ -1,5 +1,6 @@
 const gameOverScreen = document.querySelector(".gameOverScreen");
 const gameErrorScreen = document.querySelector(".gameErrorScreen");
+const gameToggle = document.querySelector(".gameToggle");
 
 const gamePuzzleElements = document.querySelectorAll(".gamePuzzle");
 const gamePuzzlePlaceElements = document.querySelectorAll(".gamePuzzlePlace");
@@ -45,12 +46,19 @@ gameContainer.addEventListener("click", (e) => {
 	const className = e.target.classList[0];
 	switch(className) {
 		case "gamePuzzle":
-			toggleSelectedPuzzle(clickTarget);
+			if(gameToggle.checked) {
+				toggleSelectedPuzzle(clickTarget);
+			} else {
+				const selectedPuzzle = gamePuzzles.find((puzzle) => puzzle.element === clickTarget);
+				const emptyPlace = gamePuzzlePlaces.find((puzzlePlace) => !gamePuzzles.some((puzzle) => puzzle.elementPositionIndex === puzzlePlace.elementIndex));
+				checkPuzzleToMove(selectedPuzzle, emptyPlace);
+			}
 			return;
 		case "gamePuzzlePlace":
 			const activePuzzle = document.querySelector(".gamePuzzle.active");
 			const selectedPuzzle = gamePuzzles.find((puzzle) => puzzle.element === activePuzzle);
-			checkPuzzleToMove(selectedPuzzle, clickTarget);
+			const selectedPuzzlePlace = gamePuzzlePlaces.find((place) => place.element === clickTarget);
+			checkPuzzleToMove(selectedPuzzle, selectedPuzzlePlace);
 			return;
 	}
 });
@@ -70,9 +78,8 @@ const toggleSelectedPuzzle = (puzzleElement) => {
 	}
 }
 
-const checkPuzzleToMove = (puzzleToMove, clickedPlace) => {
+const checkPuzzleToMove = (puzzleToMove, selectedPuzzlePlace) => {
 	if (!puzzleToMove) return
-	const selectedPuzzlePlace = gamePuzzlePlaces.find((place) => place.element === clickedPlace);
 
 	const isEmpty = checkIfPlaceIsEmpty(selectedPuzzlePlace);
 	const isNeighbour = checkIfIsNeighbour(puzzleToMove, selectedPuzzlePlace);

@@ -147,3 +147,48 @@
 	left: 5.5%;
 	border-radius: 50%;
 }
+
+.gameType {
+	font-size: 23px;
+	color: var(--momoroz);
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.gameType p {
+	margin: 0 5px;
+}
+
+.gameType input {
+	width: 100px;
+	height: 50px;
+	position: relative;
+}
+
+.gameType input::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--bialy);
+	border-radius: 25px;
+}
+
+.gameType input::after {
+	position: absolute;
+	content: "";
+	width: 48px;
+	height: 48px;
+	top: 1px;
+	right: calc(100% - 49px);
+	background: var(--momoroz);
+	border-radius: 50%;
+	transition: 400ms;
+}
+
+.gameType input:checked::after {
+	right: 1px;
+}
