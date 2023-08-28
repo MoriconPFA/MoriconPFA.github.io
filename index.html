@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="./styles/submissions.css">
 	<link rel="stylesheet" href="./styles/regulations.css">
 	<link rel="stylesheet" href="./styles/contact.css">
+	<link rel="stylesheet" href="./styles/game.css">
 	<link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
@@ -130,6 +131,9 @@
 				</a>
 				<a href="https://www.facebook.com/UsaginomimiWorkshop" target="_blank">
 					<img src="./assets/sponsors/usagi_no_mimi_small.png" />
+				</a>
+				<a href="https://oyakata.com.pl/" target="_blank" class="oyakata">
+					<img src="./assets/sponsors/oyakata.png" />
 				</a>
 			</div>
 		</aside>
@@ -264,6 +268,43 @@
 			<h2 class="timeRemining"></h2>
 		</article>
 
+		<article id="game">
+			<h2>Gra dla zabicia czasu:</h2>
+			<div class="game">
+				<div class="gameContainer">
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+					<div class="gamePuzzle"></div>
+		
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+					<div class="gamePuzzlePlace"></div>
+				</div>
+				<div class="gameOverScreen">
+					<h2 class="gameOverTitle">Wygrałeś!</h2>
+					<p class="gameOverDescription"></p>
+					<button class="button" onclick="setupGame()">Zagraj ponownie</button>
+				</div>
+				<div class="gameErrorScreen">
+					<h2 class="gameOverTitle">Wystąpił błąd przy generowaniu puzzli!</h2>
+					<button class="button" onclick="setupGame()">Spróbuj ponownie</button>
+				</div>
+				<div class="gameShowHint"></div>
+				<div class="gameHint"></div>
+			</div>
+		</article>
+
 	</main>
 	<!-- END CONTENT -->
 
@@ -300,4 +341,5 @@
 <script src="./scripts/default_script.js"></script>
 <script src="./scripts/timer.js"></script>
 <script src="./scripts/sponsors.js"></script>
+<script src="./scripts/game.js"></script>
 </html>

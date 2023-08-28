@@ -7,6 +7,7 @@ const bushRight = document.querySelector("#home .bushRight");
 window.addEventListener("load", function () {
 	const pageLoading = document.querySelector(".pageLoading");
 	pageLoading?.classList?.add("hidding");
+	setupGame()
 	setTimeout(() => {
 		pageLoading?.remove();
 

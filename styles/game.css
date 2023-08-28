@@ -1,0 +1,135 @@
+:root {
+	--game-size: min(85vw, 800px);
+	/* --game-background: url("https://picsum.photos/800"); */
+	--game-background: url("../assets/puzzle.jpg");
+}
+
+#game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 50px 0;
+}
+
+#game h2 {
+	font-size: 50px;
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
+
+@media screen and (width < 900px) {
+	#game h2 {
+		font-size: 30px;
+	}
+	#game .button {
+		font-size: 20px;
+	}
+
+}
+
+.game {
+	width: var(--game-size);
+	height: var(--game-size);
+	position: relative;
+}
+
+.gameContainer {
+	border: 2px solid white;
+	width: var(--game-size);
+	height: var(--game-size);
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gamePuzzle {
+	/* border: 1px solid white; */
+	width: calc(33.33% - 2px);
+	height: calc(33.33% - 2px);
+	position: absolute;
+	background: var(--game-background);
+	transition: top 300ms, left 300ms;
+	background-size: 300%;
+	color: white;
+	text-shadow: -1px -1px 0px black, 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+	font-size: 30px;
+}
+
+.gamePuzzle.active {
+	box-shadow: 0px 0px 20px white;
+	z-index: 1;
+}
+
+.gamePuzzlePlace {
+	/* border: 1px solid red; */
+	width: calc(33.33% - 2px);
+	height: calc(33.33% - 2px);
+}
+
+.gameOverScreen, .gameErrorScreen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	inset: 0;
+	background-color: linear-gradient(#ecf6af 50%, #edf7d1 60%, #f8fad0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 2;
+}
+
+.gameOverScreen {
+	background-size: 100%, 100%;
+	background: linear-gradient(#ecf6af99 50%, #edf7d199 60%, #f8fad099), var(--game-background);
+	background-size: cover, contain;
+}
+
+.gameOverScreen.active, .gameErrorScreen.active {
+	display: flex;
+	animation: smoothShow 1s linear 200ms both;
+}
+
+@keyframes smoothShow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.gameHint {
+	inset: 0;
+	/* top: 1px;
+	left: 1px; */
+	position: absolute;
+	width: var(--game-size);
+	height: var(--game-size);
+	background: var(--game-background);
+	background-size: 100%;
+	display: none;
+	z-index: 2;
+}
+
+.gameShowHint {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: calc(100% + 4px);
+	background: url("../assets/flower.png") no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.gameShowHint:hover ~.gameHint {
+	display: block;
+}
+
+.gameOverDescription {
+	font-size: 23px;
+	color: var(--momoroz);
+	text-shadow: 1px 1px #fff, -1px -1px #fff, -1px 1px #fff, 1px -1px #fff, 0px 1px #fff, 1px 0px #fff, -1px 0px #fff, 0px -1px #fff;
+}
