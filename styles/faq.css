@@ -48,20 +48,17 @@ details[open] summary:after{
   content: "\00D7";
 }
 
-details[open] div{
+details div {
   padding: .5em 1em;
 }
-details[open] summary ~ * {
+
+details[open] div {
   animation: sweep .5s ease-in-out both;
 }
 
-details summary ~ * {
-	animation: none;
-}
-
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
+  0%    {opacity: 0; translate: 0 -30px}
+  100%  {opacity: 1; translate: 0 -15px}
 }
 
 @media screen and (width < 900px) {

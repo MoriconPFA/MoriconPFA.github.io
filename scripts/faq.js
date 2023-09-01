@@ -15,10 +15,10 @@ const faqContent = [
 		a: "Nie, opaskę otrzymujesz jedną w zależności od zakupionego biletu. Wyjątkiem jest sytuacja, gdy kupujesz bilet oddzielnie na każdy dzień."
 	}, {
 		q: "Kupiłem bilet online, gdzie i kiedy mogę odebrać wejściówkę?",
-		a: `Akredytacja będzie czynna:
-		w piątek od 13:00 do 20:00;
-		w sobotę, 09.09.2023 r.,  od 09:00 do 18:00;
-		w niedzielę, 10.09.2023 r., od 09:00 do 13:00.`
+		a: `Akredytacja będzie czynna:<br>
+		w piątek, 08.09.2023 r., od 13:00 do 20:00<br>
+		w sobotę, 09.09.2023 r., od 09:00 do 18:00<br>
+		w niedzielę, 10.09.2023 r., od 09:00 do 13:00`
 	}, {
 		q: "Czy na Moriconie będzie sleep?",
 		a: "Niestety nie mamy sleepa, ale pobliskie akademiki oferują pokoje blisko konwentu w przystępnych cenach."
