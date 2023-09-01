@@ -3,7 +3,7 @@ const sponsorsContainer = document.querySelector("#sponsors .container");
 let animationIsRunning = false;
 let sponsorsClone = null;
 
-const animationBreakpoint = 1490;
+const animationBreakpoint = 2635;
 
 const onWindowResize = () => {
 	if (window.innerWidth < animationBreakpoint && !animationIsRunning) {
