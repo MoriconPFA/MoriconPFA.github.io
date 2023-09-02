@@ -16,6 +16,8 @@ window.addEventListener("load", function () {
 		bushLeft.classList.add("slideLeftBush");
 		bushRight.classList.add("slideRightBush");
 	}, 1000);
+	onWindowResize();
+
 	console.log("Page is loaded!");
 })
 

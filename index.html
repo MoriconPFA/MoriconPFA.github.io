@@ -334,7 +334,10 @@
 			</div>
 			<div class="gameType">
 				<p>Tryb jednoklikowy</p>
-				<input type="checkbox" class="gameToggle" />
+				<label for="gameToggle">
+					<input type="checkbox" id="gameToggle" />
+					<span></span>
+				</label>
 				<p>Tryb dwuklikowy</p>
 			</div>
 		</article>
@@ -370,6 +373,37 @@
 			</a>
 		</div>
 	</footer>
+
+	<!-- FB CHATLIST PLUGIN! -->
+	<div id="fb-root"></div>
+
+	<div id="fb-customer-chat" class="fb-customerchat"></div>
+
+	<script>
+		var chatbox = document.getElementById('fb-customer-chat');
+		chatbox.setAttribute("page_id", "379402065594902");
+		chatbox.setAttribute("attribution", "biz_inbox");
+	</script>
+
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				xfbml            : true,
+				version          : 'v17.0'
+			});
+		};
+
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			console.log(fjs)
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
 </body>
 <script src="./scripts/menu_script.js"></script>
 <script src="./scripts/default_script.js"></script>

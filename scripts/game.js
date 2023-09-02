@@ -1,6 +1,6 @@
 const gameOverScreen = document.querySelector(".gameOverScreen");
 const gameErrorScreen = document.querySelector(".gameErrorScreen");
-const gameToggle = document.querySelector(".gameToggle");
+const gameToggle = document.querySelector("#gameToggle");
 
 const gamePuzzleElements = document.querySelectorAll(".gamePuzzle");
 const gamePuzzlePlaceElements = document.querySelectorAll(".gamePuzzlePlace");

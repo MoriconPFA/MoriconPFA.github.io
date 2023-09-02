@@ -162,24 +162,31 @@
 	margin: 0 5px;
 }
 
-.gameType input {
+.gameType :where(input, label) {
 	width: 100px;
 	height: 50px;
 	position: relative;
+	cursor: pointer;
 }
 
-.gameType input::before {
+.gameType input {
+	visibility: hidden;
+}
+
+.gameType label span {
 	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
+	content: " ";
+	width: 100px;
+	height: 50px;
 	background: var(--bialy);
 	border-radius: 25px;
+	z-index: 1;
+	top: 0;
 }
 
-.gameType input::after {
+.gameType label span::after {
 	position: absolute;
-	content: "";
+	content: " ";
 	width: 48px;
 	height: 48px;
 	top: 1px;
@@ -187,8 +194,9 @@
 	background: var(--momoroz);
 	border-radius: 50%;
 	transition: 400ms;
+	z-index: 1;
 }
 
-.gameType input:checked::after {
+.gameType input:checked + span::after {
 	right: 1px;
 }

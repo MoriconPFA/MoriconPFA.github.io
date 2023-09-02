@@ -22,5 +22,3 @@ const onWindowResize = () => {
 }
 
 window.addEventListener("resize", onWindowResize)
-
-onWindowResize();
